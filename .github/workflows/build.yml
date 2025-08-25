@@ -18,7 +18,7 @@ jobs:
 
             apt update
             wget https://archive.debian.org/debian/pool/main/libx/libxml2/python-libxml2_2.9.4+dfsg1-7+deb10u4_amd64.deb
-            apt-get install python-is-python2 ./python-libxml2_2.9.4+dfsg1-7+deb10u4_amd64.deb xutils-dev autotools-dev
+            apt-get install python-is-python2 ./python-libxml2_2.9.4+dfsg1-7+deb10u4_amd64.deb xutils-dev autotools-dev -y
 
             export PYTHON=/usr/bin/python2
             autoreconf -fiv
