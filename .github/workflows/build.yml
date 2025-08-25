@@ -25,6 +25,7 @@ jobs:
             mkdir OUT
             ./configure --with-ppu-prefix=OUT --disable-samples
             make -j$(nproc)
+            make install
 
       - uses: actions/upload-artifact@v4
         with:
