@@ -22,9 +22,10 @@ jobs:
 
             export PYTHON=/usr/bin/python2
             autoreconf -fiv
-            ./configure
+            mkdir OUT
+            ./configure --with-ppu-prefix=OUT --disable-samples
             make -j$(nproc)
 
       - uses: actions/upload-artifact@v4
         with:
-          path: src/samples/rsxglgears/rsxglgears.elf
+          path: OUT
