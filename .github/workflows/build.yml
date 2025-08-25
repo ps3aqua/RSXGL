@@ -22,11 +22,12 @@ jobs:
 
             export PYTHON=/usr/bin/python2
             autoreconf -fiv
-            mkdir OUT
-            ./configure --with-ppu-prefix=OUT --disable-samples
+            mkdir ~/OUT
+            ./configure --with-ppu-prefix=~/OUT --disable-samples
             make -j$(nproc)
             make install
-            7z a OUT.zip OUT/*
+            find ~/OUT
+            7z a OUT.zip ~/OUT
 
       - uses: actions/upload-artifact@v4
         with:
